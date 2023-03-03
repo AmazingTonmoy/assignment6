@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./styles/style.css" />
     <!-- Bootstrap Css link -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -52,115 +54,141 @@
       </section>
 
       <section class="container-fluid">
-        
-    <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered" style="max-width: 1250px; height: max-content">
-      <div class="modal-content container p-5">
-        <div class="modal-header border-0">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-       
-        <div class="modal-body">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered"
+            style="max-width: 1250px; height: max-content"
+          >
+            <div class="modal-content container p-5">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close"
+                  id="btn-x"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
 
-            <div class="row g-4 d-flex justify-content-evenly" id="modal-container">
-                <!-- left side div -->
-                <div class="col-12 col-lg-5 bg-warning border border-2 border-danger rounded-4 p-4 ">
-
+              <div class="modal-body">
+                <div
+                  class="row g-4 d-flex justify-content-evenly"
+                  id="modal-container"
+                >
+                  <!-- left side div -->
+                  <div
+                    class="col-12 col-lg-5 bg-warning border border-2 border-danger rounded-4 p-4"
+                  >
                     <!-- 1st line section start -->
-                    <div>  
-                        <h5>ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT technology to simulate human conversation.</h5> 
+                    <div>
+                      <h5>
+                        ChatGPT is an AI-powered chatbot platform that uses
+                        OpenAI's GPT technology to simulate human conversation.
+                      </h5>
                     </div>
-                  
-                 <!-- 1st line section End -->
-                  
-                     <!--  2nd inside line section start -->
-                         <div class="row">
-                
-                         <div class="p-3 col-12 col-lg-4"> 
-                    
-                    <p class="text-center bg-success rounded w-75  p-2 fw-bold">$10/ month Basic</p> 
 
-                </div>
-                
-                <div class="p-3 col-12 col-lg-4">
-                    <p class="text-center bg-success rounded w-75 p-2 fw-bold">$50/
-                        month
-                        Pro</p>
-                </div>
-               
-                <div class="p-3 col-12 col-lg-4">
-                    <p class="text-center bg-success rounded w-75 p-2 fw-bold">Contact 
-                        
-                        
-                        us
-                        Enterprise</p>
-                </div>
-            </div>
-            <!-- 2nd line section end -->
+                    <!-- 1st line section End -->
 
-            <!-- 3rd line section start -->
+                    <!--  2nd inside line section start -->
+                    <div class="row">
+                      <div class="p-3 col-12 col-lg-4">
+                        <p
+                          class="text-center bg-success rounded w-75 p-2 fw-bold"
+                        >
+                          $10/ month Basic
+                        </p>
+                      </div>
 
-             <!-- third inside line column div -->
-             <div class="row mt-3 p-1">
-                <!-- third line left side -->
-                <div class="col-12 col-lg-7">
-                    <h3>Features</h3>
-                    <ul class="" >
-                        <li>Customizable responses</li>
-                        <li>Multilingual support</li>
-                        <li>Seamless integration</li>
-                    </ul>
+                      <div class="p-3 col-12 col-lg-4">
+                        <p
+                          class="text-center bg-success rounded w-75 p-2 fw-bold"
+                        >
+                          $50/ month Pro
+                        </p>
+                      </div>
 
-                </div>
+                      <div class="p-3 col-12 col-lg-4">
+                        <p
+                          class="text-center bg-success rounded w-75 p-2 fw-bold"
+                        >
+                          Contact us Enterprise
+                        </p>
+                      </div>
+                    </div>
+                    <!-- 2nd line section end -->
 
-                <!-- third line right side -->
-                <div class="col-12 col-lg-5">
-                    <h3>Integrations</h3>
-                    <ul>
-                        <li>FB Messenger</li>
-                        <li> Slack</li>
-                        <li> Telegram</li>
-                    </ul>
+                    <!-- 3rd line section start -->
 
-                </div>
+                    <!-- third inside line column div -->
+                    <div class="row mt-3 p-1">
+                      <!-- third line left side -->
+                      <div class="col-12 col-lg-7">
+                        <h3>Features</h3>
+                        <ul class="">
+                          <li>Customizable responses</li>
+                          <li>Multilingual support</li>
+                          <li>Seamless integration</li>
+                        </ul>
+                      </div>
 
-            </div>
+                      <!-- third line right side -->
+                      <div class="col-12 col-lg-5">
+                        <h3>Integrations</h3>
+                        <ul>
+                          <li>FB Messenger</li>
+                          <li>Slack</li>
+                          <li>Telegram</li>
+                        </ul>
+                      </div>
+                    </div>
 
-            <!-- 3rd line section end -->
+                    <!-- 3rd line section end -->
+                  </div>
 
-
-
-                </div>
-
-                <!-- ================== =============================== -->
-                <!-- right side div -->
-                <div class="col-12 col-lg-5 border border-2 border-danger rounded-4 p-4 ms-3 ">
+                  <!-- ================== =============================== -->
+                  <!-- right side div -->
+                  <div
+                    class="col-12 col-lg-5 border border-2 border-danger rounded-4 p-4 ms-3"
+                  >
                     <div class="position-relative">
-                        <img class="w-100 rounded-3" src="https://www.datanami.com/wp-content/uploads/2023/01/chat_gpt_shutterstock_Ebru-Omer.jpg" alt="">
-                        <h3 class="text-center mt-5">Hi, how are you doing today?</h3>
-                        <p class="text-center">I'm doing well, thank you for asking. How can I assist you today?</p>
-                        <div class="position-absolute top-0 mt-2 me-3 end-0 z-3"><button class="btn btn-danger ">94% accuracy</button> </div>
+                      <img
+                        class="w-100 rounded-3"
+                        src="https://www.datanami.com/wp-content/uploads/2023/01/chat_gpt_shutterstock_Ebru-Omer.jpg"
+                        alt=""
+                      />
+                      <h3 class="text-center mt-5">
+                        Hi, how are you doing today?
+                      </h3>
+                      <p class="text-center">
+                        I'm doing well, thank you for asking. How can I assist
+                        you today?
+                      </p>
+                      <div class="position-absolute top-0 mt-2 me-3 end-0 z-3">
+                        <button class="btn btn-danger">94% accuracy</button>
+                      </div>
                     </div>
                     <!-- 1st line section start -->
-
-
+                  </div>
                 </div>
-
-
+              </div>
             </div>
-
-           
- 
-           
-       
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
       </section>
+      <!-- loading -->
 
-
+      <section>
+        <div id="spinner" class="spinner"></div>
+      </section>
     </main>
 
     <!-- Bootstrap script -->
