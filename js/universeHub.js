@@ -1,4 +1,4 @@
-let displayedItemsEnd = 6;
+let displayedItemsEnd = 13;
 let displayedItemsStart = 0;
 
 const loadUniverse = async () => {
@@ -53,8 +53,8 @@ loadUniverse(); // load initial data
 // add click event listener to See More button
 document.getElementById("see-more-btn")
   .addEventListener("click", function () {
-    displayedItemsEnd  = [12];
-    displayedItemsStart = 0 ;
+    displayedItemsEnd  = 12;
+    displayedItemsStart = 0;
     loadUniverse()
     this.innerText = "No More";
   });
@@ -89,17 +89,17 @@ const showUniverseDetails = details =>{
     
              <div class="p-2 col-12 col-lg-4"> 
         
-        <p class="text-center bg-success rounded w-100  h-75 px-3 py-3 mt-3  fw-bold"> ${details.pricing[0].price}  ${details.pricing[0].plan}</p> 
+        <p class="text-center bg-success rounded w-100  h-75 px-3 py-3 mt-3  fw-bold"> ${details.pricing ? details.pricing[0].price : 'No data bro'}  ${details.pricing ? details.pricing[0].plan : 'no data bro'}</p> 
 
     </div>
     
     <div class="p-2 col-12 col-lg-4">
-        <p class="text-center bg-success rounded  w-100 h-75 px-3 py-3 mt-3 fw-bold"> ${details.pricing[1].price}  ${details.pricing[1].plan}
+        <p class="text-center bg-success rounded  w-100 h-75 px-3 py-3 mt-3 fw-bold"> ${details.pricing ? details.pricing[1].price : 'No data bro'}  ${details.pricing ? details.pricing[1].plan : 'no data bro'}
             </p>
     </div>
    
     <div class="p-2 col-12 col-lg-4">
-        <p class="text-center bg-success rounded w-100 h-75 px-3 py-3 mt-3 fw-bold">${details.pricing[2].price}  ${details.pricing[2].plan}</p>
+        <p class="text-center bg-success rounded w-100 h-75 px-3 py-3 mt-3 fw-bold">${details.pricing ? details.pricing[2].price : 'No data bro'}  ${details.pricing ? details.pricing[2].plan : 'no data bro'}</p>
     </div>
 </div>
 <!-- 2nd line section end -->
@@ -123,9 +123,9 @@ const showUniverseDetails = details =>{
     <div class="col-12 col-lg-5">
         <h3>Integrations</h3>
         <ul class= "p-1">
-            <li>${details.integrations[0]}</li>
-            <li> ${details.integrations[1]}</li>
-            <li> ${details.integrations[2]}</li>
+            <li>${details.integrations ? details.integrations[0] : 'no data found'}</li>
+            <li> ${details.integrations ? details.integrations[1] : 'no data found'} </li>
+            <li> ${details.integrations ? details.integrations[2] : 'no data found'}</li>
         </ul>
 
     </div>
@@ -143,9 +143,14 @@ const showUniverseDetails = details =>{
     <div class="col-12 col-lg-5 border border-2 border-danger rounded-4 p-4 ms-3 ">
         <div class="position-relative">
             <img class="w-100  rounded-3" src="${details.image_link[0]}" alt="">
-            <h3 class="text-center mt-5">${details.input_output_examples[0].input}</h3>
-            <p class="text-center">${details.input_output_examples[0].output}</p>
-            <div class="position-absolute top-0 mt-1 me-3 end-0 z-3"><button class="btn btn-danger w-100 ">${details.accuracy.score * 100}% accuracy</button> </div>
+            <h3 class="text-center mt-5">${details.input_output_examples? details.input_output_examples[0].input : "no data found"}</h3>
+            <p class="text-center">${details.input_output_examples ? details.input_output_examples[0].output : "No data found"}</p>
+            <div class="position-absolute top-0 mt-1 me-3 end-0 z-3">
+            <button class="btn btn-danger w-100" style="display: ${details.accuracy && details.accuracy.score ? 'block' : 'none'}">
+              ${details.accuracy && details.accuracy.score ? details.accuracy.score * 100 : ''}% accuracy
+            </button>
+          </div>
+          
         </div>
         <!-- 1st line section start -->
 
@@ -154,5 +159,7 @@ const showUniverseDetails = details =>{
     `
     
 }
+
+
 
 
