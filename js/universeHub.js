@@ -3,9 +3,11 @@ let displayedItemsEnd = 6;
 
 const loadUniverse = async () => {
   const url = `https://openapi.programming-hero.com/api/ai/tools`;
+  const spinner = document.getElementById("spinner");
   const res = await fetch(url);
   const data = await res.json();
   showUniverse(data.data.tools);
+  spinner.classList.add('loader-hidden')
   document.getElementById('sort-btn').addEventListener('click',function(){
     const sortedData = data.data.tools.sort((a, b) => new Date(b.published_in) - new Date(a.published_in));
     showUniverse(sortedData);
@@ -155,7 +157,7 @@ const showUniverseDetails = details =>{
             <img class="w-100  rounded-3" src="${details.image_link[0]}" alt="">
             <h3 class="text-center mt-5">${details.input_output_examples? details.input_output_examples[0].input : "no data found"}</h3>
             <p class="text-center">${details.input_output_examples ? details.input_output_examples[0].output : "No data found"}</p>
-            <div class="position-absolute top-0 mt-1 me-3 end-0 z-3"id="modal-img-btn">
+            <div class="position-absolute top-0 mt-1 me-2 end-0 z-3"id="modal-img-btn">
             <button class="btn btn-danger w-100"  style="display: ${details.accuracy && details.accuracy.score ? 'block' : 'none'}">
               ${details.accuracy && details.accuracy.score ? details.accuracy.score * 100 : ''}% accuracy
             </button>
