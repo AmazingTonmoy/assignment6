@@ -155,8 +155,8 @@ const showUniverseDetails = details =>{
             <img class="w-100  rounded-3" src="${details.image_link[0]}" alt="">
             <h3 class="text-center mt-5">${details.input_output_examples? details.input_output_examples[0].input : "no data found"}</h3>
             <p class="text-center">${details.input_output_examples ? details.input_output_examples[0].output : "No data found"}</p>
-            <div class="position-absolute top-0 mt-1 me-3 end-0 z-3">
-            <button class="btn btn-danger w-100" style="display: ${details.accuracy && details.accuracy.score ? 'block' : 'none'}">
+            <div class="position-absolute top-0 mt-1 me-3 end-0 z-3"id="modal-img-btn">
+            <button class="btn btn-danger w-100"  style="display: ${details.accuracy && details.accuracy.score ? 'block' : 'none'}">
               ${details.accuracy && details.accuracy.score ? details.accuracy.score * 100 : ''}% accuracy
             </button>
           </div>

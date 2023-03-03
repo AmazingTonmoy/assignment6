@@ -34,9 +34,32 @@ color: red;
     padding: 10px;
     /* margin-right: -60px;
     margin-top: -85px; */
-    margin-right: -80px;
-    margin-top: -130px;
+    margin-right: -55px;
+    margin-top: -88px;
     opacity: 10;
    
 
  }
+ 
+
+ @media screen and (max-width: 576px) {
+    #btn-x{
+        background-color: red;
+        border-radius: 50%;
+        padding: 10px;
+        margin-right: -36px;
+        margin-top: -36px;
+        /* margin-right: -80px;
+        margin-top: -130px; */
+        opacity: 10;
+  }}
+
+  @media screen and (max-width: 300px) {
+    #modal-img-btn{
+        font-size: 20%;
+        height: auto;
+        width: min-content;
+        padding: 0;
+        
+    }
+  }
